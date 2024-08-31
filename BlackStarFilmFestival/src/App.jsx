@@ -11,9 +11,7 @@ function App() {
     <>
       <div className='container'>
         <Header />
-        <Main>
-          <Footer />
-        </Main>
+        <Main />
       </div>
     </>
   )
