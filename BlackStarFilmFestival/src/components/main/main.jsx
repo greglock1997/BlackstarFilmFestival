@@ -1,11 +1,12 @@
 import Footer from '../footer/footer.jsx';
+import './main.css';
 
 export default function Main() {
     return (
         <>
-            <div className='main-container'>
+            <main className='main-container'>
                 <Footer />
-            </div>
+            </main>
         </>
     )
 }

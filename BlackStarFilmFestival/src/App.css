@@ -11,12 +11,3 @@
   min-height: 100vh;
   background-color: #F1ECE6;
 }
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 100%;
-  height: 200px;
-  background-color: #FF6222;
-}
