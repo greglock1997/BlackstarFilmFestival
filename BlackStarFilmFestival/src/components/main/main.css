@@ -1,18 +1,5 @@
-@font-face {
-    font-family: 'Matter-Regular';
-    src: url('../../fonts/Matter-Regular.woff2') format('woff2'), url('../../fonts/Matter-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Matter-Medium';
-    src: url('../../fonts/Matter-Medium.woff2') format('woff2'), url('../../fonts/Matter-Medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .main-container {
+    font-family: 'Matter-Regular';
     margin-top:  200px;
     flex-grow: 1;
     display: flex;
@@ -36,14 +23,13 @@
     border-bottom: 1px solid #000000;
 }
 
-a.fixed-anchor {
-    position: absolute; /* Position it relative to the .main-container */
-    top: -40px; /* Adjust this value as needed to place it 0px above the .main-container */
-    left: 0; /* Position it from the left edge */
-    background-color: blue; /* Style for visibility */
-    color: white; /* Text color for visibility */
-    padding: 10px; /* Padding for better appearance */
-    text-decoration: none; /* Remove underline from the link */
+.main-films {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
 }
 
 @media (max-width: 767px) {
