@@ -1,0 +1,90 @@
+.filterMenu {
+    font-style: 'Matter-Medium';
+    width: 100%;
+    background-color: #D4CAFF;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 40px;
+}
+
+.filterMenu-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.filterMenu-header img {
+    cursor: pointer;
+}
+
+.filterMenu-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+
+.filterMenu-option {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.filterMenu-option-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000000;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.filterMenu-option-text {
+    border-bottom: 1px solid #000000;
+    margin-bottom: 20px;
+    width: 45%;
+}
+
+.filterMenu-option-checkboxes {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #000000;
+}
+
+/* Custom styled text input */
+input[type="text"] {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: #000000;
+}
+
+/* Custom styled checkbox */
+/* Come back and change later */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 10px;
+    width: 10px;
+    border: 1px solid #000000;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #000000;
+}
+
+label {
+    margin-bottom: 20px;
+    cursor: pointer;
+}

@@ -23,6 +23,10 @@
     border-bottom: 1px solid #000000;
 }
 
+.main-header img {
+    cursor: pointer;
+}
+
 .main-films {
     display: flex;
     flex-wrap: wrap;
