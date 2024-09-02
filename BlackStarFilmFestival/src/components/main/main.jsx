@@ -22,23 +22,28 @@ export default function Main({ filmData, searchTags, updateSearchTags, updateNum
                         onClick={toggleFilterMenuOpen}
                     />
                 </header>
-                {filterMenuOpen && 
-                    <FilterMenu 
+                {filterMenuOpen &&
+                    <FilterMenu
                         toggleFilterMenuOpen={toggleFilterMenuOpen}
                         searchTags={searchTags}
                         updateSearchTags={updateSearchTags}
                     />
                 }
                 <div className='main-films'>
-                    {filmData && filmData.length > 0 ? (
-                        filmData.map((film) => (
-                            <FilmCard film={film} />
-                        ))
+                    {/* Check for data, display loading screen */}
+                    {filmData === null ? (
+                        <h1>Loading films...</h1>
                     ) : (
-                        <p>Loading...</p>
+                        filmData && filmData.length > 0 ? (
+                            filmData.map((film) => (
+                                <FilmCard film={film} />
+                            ))
+                        ) : (
+                            <h1>No films found</h1>
+                        )
                     )}
                 </div>
-                <button 
+                <button
                     className='main-loadMore'
                     onClick={updateNumberOfResults}
                 >
