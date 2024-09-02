@@ -4,7 +4,7 @@ import FilmCard from '../filmCard/filmCard.jsx';
 import FilterMenu from '../filterMenu/filterMenu.jsx';
 import './main.css';
 
-export default function Main({ filmData, searchQuery, setSearchQuery }) {
+export default function Main({ filmData, searchTags, updateSearchTags }) {
     const [filterMenuOpen, setFilterMenuOpen] = useState(false);
 
     const toggleFilterMenuOpen = () => {
@@ -25,8 +25,8 @@ export default function Main({ filmData, searchQuery, setSearchQuery }) {
                 {filterMenuOpen && 
                     <FilterMenu 
                         toggleFilterMenuOpen={toggleFilterMenuOpen}
-                        searchQuery={searchQuery}
-                        setSearchQuery={setSearchQuery}
+                        searchTags={searchTags}
+                        updateSearchTags={updateSearchTags}
                     />
                 }
                 <div className='main-films'>

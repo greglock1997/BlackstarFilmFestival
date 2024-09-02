@@ -25,11 +25,22 @@
     margin-bottom: 40px;
 }
 
+.filterMenu-section button {
+    background: none;
+    border: 1px solid #000000;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
 
 .filterMenu-option {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    min-width: 45%;
 }
 
 .filterMenu-option-header {
