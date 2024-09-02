@@ -4,7 +4,7 @@ import FilmCard from '../filmCard/filmCard.jsx';
 import FilterMenu from '../filterMenu/filterMenu.jsx';
 import './main.css';
 
-export default function Main({ filmData, searchTags, updateSearchTags }) {
+export default function Main({ filmData, searchTags, updateSearchTags, updateNumberOfResults }) {
     const [filterMenuOpen, setFilterMenuOpen] = useState(false);
 
     const toggleFilterMenuOpen = () => {
@@ -38,6 +38,12 @@ export default function Main({ filmData, searchTags, updateSearchTags }) {
                         <p>Loading...</p>
                     )}
                 </div>
+                <button 
+                    className='main-loadMore'
+                    onClick={updateNumberOfResults}
+                >
+                    Load More
+                </button>
                 <Footer />
             </main>
         </>

@@ -6,8 +6,13 @@ import Main from './components/main/main.jsx';
 
 
 function App() {
+  const [numberOfResults, setNumberOfResults] = useState(10);
   const [searchTags, setSearchTags] = useState([]);
   const [filmData, setFilmData] = useState(null);
+
+  const updateNumberOfResults = () => {
+    setNumberOfResults(numberOfResults + 10);
+  }
 
   const updateSearchTags = (newTags) => {
     setSearchTags(newTags);
@@ -19,7 +24,7 @@ function App() {
       try {
         // Combine tags array into string
         const tagQueryString = searchTags.length > 0 ? `&search=${searchTags.join(',')}` : '';
-        const response = await fetch(`https://wp.blackstarfest.org/wp-json/wp/v2/festival-film?per_page=10&page=1&_year=2024&rich=1&not_hidden=1${tagQueryString}`);
+        const response = await fetch(`https://wp.blackstarfest.org/wp-json/wp/v2/festival-film?per_page=${numberOfResults}&page=1&_year=2024&rich=1&not_hidden=1${tagQueryString}`);
         const data = await response.json();
         
         setFilmData(data);
@@ -29,7 +34,7 @@ function App() {
     };
 
     fetchData();
-  }, [searchTags]);
+  }, [searchTags, numberOfResults]);
 
   return (
     <>
@@ -39,6 +44,7 @@ function App() {
           filmData={filmData}
           searchTags={searchTags}
           updateSearchTags={updateSearchTags}
+          updateNumberOfResults={updateNumberOfResults}
         />
       </div>
     </>
