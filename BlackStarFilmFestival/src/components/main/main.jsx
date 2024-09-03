@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from '../footer/footer.jsx';
 import FilmCard from '../filmCard/filmCard.jsx';
 import FilterMenu from '../filterMenu/filterMenu.jsx';

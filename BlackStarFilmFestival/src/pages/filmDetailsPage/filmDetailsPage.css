@@ -1,0 +1,119 @@
+.filmDetails-container {
+    font-family: 'Matter-Regular';
+    margin-top: 200px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #FF6222;
+    position: relative;
+}
+
+.filmDetails-films {
+    width: 100%;
+    position: relative;
+}
+
+.filmDetails-header {
+    font-family: 'Matter-Medium';
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #FF6222;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.filmDetails-header a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #000000;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.filmDetails-header a:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.filmDetails-films {
+    width: 100%;
+}
+
+.filmDetails-image img {
+    width: 100%;
+    height: auto;
+}
+
+.filmDetails-description {
+    width: 100%;
+    padding: 40px;
+}
+
+.filmDetails-description p {
+    margin-bottom: 40px;
+}
+
+.filmDetails-description a {
+    color: #000000;
+}
+
+@media (max-width: 767px) {
+    .filmDetails-header {
+        font-family: 'Matter-Medium';
+        font-size: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        padding: 40px;
+        background-color: #FF6222;
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+        border-radius: 0;
+        margin-bottom: 40px;
+        position: static;
+    }
+
+    .filmDetails-header a {
+        font-size: 15px;
+        text-decoration: none;
+        color: #000000;
+        padding: 5px;
+        border: 1px solid #000000;
+        border-radius: 20px;
+        margin-right: 10px;
+        transition: 0.5s;
+    }
+
+    .filmDetails-films {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .filmDetails-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        border: 1px solid #000000;
+    }
+}

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './filmCard.css';
 
 export default function FilmCard({ film = {} }) {
@@ -21,8 +22,8 @@ export default function FilmCard({ film = {} }) {
             </div>
             <div className='filmCard-links-acessibility'>
                 <div className='filmCard-links'>
-                    {/* Add links at later point */}
-                    <a href=''>Read More</a>
+                    <Link to={`/film/${film.id}`}>Read More</Link>
+                    {/* Inactive trailer link, add later */}
                     <a href=''>Watch Trailer</a>
                 </div>
                 <div className='filmCard-accessibility'>
