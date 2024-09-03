@@ -1,21 +1,8 @@
-@font-face {
-    font-family: 'Matter-Regular';
-    src: url('../../fonts/Matter-Regular.woff2') format('woff2'), url('../../fonts/Matter-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Matter-Medium';
-    src: url('../../fonts/Matter-Medium.woff2') format('woff2'), url('../../fonts/Matter-Medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .header-container {
     position: fixed;
     z-index: 10;
-    font-family: 'Matter-Regular';
+    font-family: 'Matter-Medium';
+    /* font-family: 'Panama-Bold'; */
     font-weight: 500;
     font-size: 20px;
     display: flex;

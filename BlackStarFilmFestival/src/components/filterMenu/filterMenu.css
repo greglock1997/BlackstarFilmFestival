@@ -99,3 +99,11 @@ label {
     margin-bottom: 20px;
     cursor: pointer;
 }
+
+@media (max-width: 767px) {
+    .filterMenu-option {
+        display: flex;
+        flex-direction: column;
+        min-width: 90%;
+    }
+}

@@ -67,3 +67,24 @@
     border-radius: 100px;
     margin-right: 10px;
 }
+
+@media (max-width: 767px) {
+    .filmCard {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .filmCard-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .filmCard-links a {
+        margin-bottom: 10px;
+    }
+    
+    .filmCard-accessibility div {
+        width: 30px;
+        height: 30px;
+    }
+}
