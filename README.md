@@ -7,7 +7,7 @@ Deployment Steps
 4. Then in your browser, navigate to http://localhost:5173/ or any alternative path shown in the command prompt
 
 Task Evaluation
-For this task I chose to use React.jsx and vanilla CSS since I'm familiar with both, and React makes it very simple to create webpages with UI that are responsive to user input and action, as well as being able to track state values. To begin I began by looking through the design files in Figma to get a better understanding of the layout of the page. Seperating the page into components such as <Main>, <Footer>, <Header> etc. Later I implemented React Router so that I could show different pages for the details of each film and to keep them seperate from the results page. I tried to keep everything fairly compartmentalised including styling, to keep changes easier to track.
+For this task I chose to use React.jsx and vanilla CSS since I'm familiar with both, and React makes it very simple to create webpages with UI that are responsive to user input and action, as well as being able to track state values. To begin I began by looking through the design files in Figma to get a better understanding of the layout of the page. Seperating the page into components such as Main, Footer, Header etc. Later I implemented React Router so that I could show different pages for the details of each film and to keep them seperate from the results page. I tried to keep everything fairly compartmentalised including styling, to keep changes easier to track.
 
 Notes
 - Please ignore my last few commits, I was trying to configure the application to work with GitHub pages and things started to get messy
