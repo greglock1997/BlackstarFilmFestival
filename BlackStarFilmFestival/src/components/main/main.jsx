@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from '../footer/footer.jsx';
 import FilmCard from '../filmCard/filmCard.jsx';
 import FilterMenu from '../filterMenu/filterMenu.jsx';
+import Tab from '../tab/tab.jsx';
 import './main.css';
 
 export default function Main({ filmData, searchTags, updateSearchTags, updateNumberOfResults }) {
@@ -15,6 +16,7 @@ export default function Main({ filmData, searchTags, updateSearchTags, updateNum
     return (
         <>
             <main className='main-container'>
+                <Tab />
                 <header className='main-header'>
                     FILMS A-Z
                     <img

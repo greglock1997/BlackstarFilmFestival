@@ -1,0 +1,24 @@
+.tab-container {
+    position: absolute;
+    /* Offset top position by 1px to allow border to match header */
+    top: -49px; 
+    width: 100%;
+    padding-left: 40px;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #FF6222;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #FF6222;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Tab from '../../components/tab/tab.jsx';
 import Footer from '../../components/footer/footer.jsx';
 import './filmDetailsPage.css';
 
@@ -21,6 +22,7 @@ export default function FilmDetailsPage({ filmData }) {
         <>
             {film ? (
                 <div className='filmDetails-container'>
+                    <Tab />
                     <header className='filmDetails-header'>
                         {film.title.rendered}
                         <Link to='/'>Back to results</Link>
@@ -31,25 +33,17 @@ export default function FilmDetailsPage({ filmData }) {
                     <div className='filmDetails-description' dangerouslySetInnerHTML={{ __html: contentHtml }} />
                     <Footer />
                 </div>
-                ) : (
-                    <main className='main-container'>
-                    <header className='main-header'>
-                        Film Not Found
-                        <img
-                        />
+            ) : (
+                <div className='filmDetails-container'>
+                    <Tab />
+                    <header className='filmDetails-header'>
+                        <h1>Film Not Found</h1>
                     </header>
-                    <div className='main-films'>
-                        <h1>Try again</h1>
-                    </div>
-                    <button
-                        className='main-loadMore'
-                    >
-                        Return to results
-                    </button>
+                    <Link to='/'>Back to results</Link>
                     <Footer />
-                </main>
-                )
-                }
+                </div>
+            )
+            }
         </>
     );
 }
