@@ -24,7 +24,7 @@ export default function FilmDetailsPage({ filmData }) {
                     <Tab />
                     <header className='filmDetails-header'>
                         {film.title.rendered}
-                        <Link to='/'>Back to results</Link>
+                        <Link to='/'><i class="fa-solid fa-arrow-left"></i> Back to results</Link>
                     </header>
                     <div className='filmDetails-films'>
                         <div className='filmDetails-image' dangerouslySetInnerHTML={{ __html: imageHtml }} />
@@ -38,7 +38,7 @@ export default function FilmDetailsPage({ filmData }) {
                     <header className='filmDetails-header'>
                         <h1>Film Not Found</h1>
                     </header>
-                    <Link to='/'>Back to results</Link>
+                    <Link to='/'><i class="fa-solid fa-arrow-left"></i> Back to results</Link>
                     <Footer />
                 </div>
             )
