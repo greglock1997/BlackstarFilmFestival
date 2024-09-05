@@ -12,12 +12,10 @@ export default function FilmDetailsPage({ filmData }) {
     // then get specific item from filmData array using id
     const { id } = useParams();
     const film = filmData ? filmData.find(film => film.id === parseInt(id)) : '';
+    
+    const imageHtml = film.featured_image_rendered ? film.featured_image_rendered['rich-card-xl'] : '';
+    const contentHtml = film.content ? film.content.rendered : '';
 
-    const imageHtml = film.featured_image_rendered?.['rich-card-xl'] || '';
-    const contentHtml = film.content?.rendered || '';
-
-
-    console.log(film);
     return (
         <>
             {film ? (

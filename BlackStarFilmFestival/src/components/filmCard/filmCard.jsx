@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import './filmCard.css';
 
 export default function FilmCard({ film = {} }) {
-    const imageHtml = film.featured_image_rendered?.card || '';
-    const title = film.title?.rendered || 'No Title';
+    const imageHtml = film.featured_image_rendered ? film.featured_image_rendered.card : '';
+    const title = film.title ? film.title.rendered : 'No Title';
 
     return (
         <div className='filmCard'>
