@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css'
 import Header from './components/header/header.jsx';
-import Main from './components/main/main.jsx';
+import MainPage from './pages/mainPage/mainPage.jsx';
 import FilmDetailsPage from './pages/filmDetailsPage/filmDetailsPage.jsx';
 
 function App() {
@@ -38,6 +38,7 @@ function App() {
   }, [searchTags, numberOfResults]);
 
   return (
+    // Use React Router to render pages based on condtions
     // Two pages, one for results, one for specific film details
     <Router>
       <div className='container'>
@@ -46,7 +47,7 @@ function App() {
           <Route
             path="/"
             element={
-              <Main
+              <MainPage
                 filmData={filmData}
                 searchTags={searchTags}
                 updateSearchTags={updateSearchTags}
@@ -54,7 +55,6 @@ function App() {
               />
             }
           />
-
           <Route
             path="/film/:id"
             element={<FilmDetailsPage filmData={filmData} />}
