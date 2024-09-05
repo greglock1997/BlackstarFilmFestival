@@ -1,18 +1,19 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+// Import <Link /> element and useParams function from react router
+import { Link, useParams } from 'react-router-dom';
+
+// Import components
 import Tab from '../../components/tab/tab.jsx';
 import Footer from '../../components/footer/footer.jsx';
-import './filmDetailsPage.css';
 
-// Import to take data from url
-import { useParams } from 'react-router-dom';
+// Import stylesheet
+import './filmDetailsPage.css';
 
 export default function FilmDetailsPage({ filmData }) {
     // Extract film id from url
     // then get specific item from filmData array using id
     const { id } = useParams();
     const film = filmData ? filmData.find(film => film.id === parseInt(id)) : '';
-    
+
     const imageHtml = film.featured_image_rendered ? film.featured_image_rendered['rich-card-xl'] : '';
     const contentHtml = film.content ? film.content.rendered : '';
 

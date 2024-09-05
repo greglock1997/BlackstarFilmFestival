@@ -1,9 +1,14 @@
+// Import necessary packages
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css'
+
+// Import pages / components
 import Header from './components/header/header.jsx';
 import MainPage from './pages/mainPage/mainPage.jsx';
 import FilmDetailsPage from './pages/filmDetailsPage/filmDetailsPage.jsx';
+
+// Import stylesheet
+import './App.css'
 
 function App() {
   const [numberOfResults, setNumberOfResults] = useState(10);
@@ -57,7 +62,11 @@ function App() {
           />
           <Route
             path="/film/:id"
-            element={<FilmDetailsPage filmData={filmData} />}
+            element={
+              <FilmDetailsPage
+                filmData={filmData}
+              />
+            }
           />
         </Routes>
       </div>
