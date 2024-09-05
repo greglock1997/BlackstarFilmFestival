@@ -33,7 +33,7 @@
     .footer-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
         font-family: 'Matter-Regular';
         width: 100%;
@@ -43,15 +43,30 @@
         border-top-right-radius: 20px;
     }
 
+
+    /* Add order attributes to make footer align with figma design */
+    .footer-container h1 {
+        font-size: 60px;
+        margin-top: 20px;
+        width: 100%;
+        text-align: left;
+        order: 3;
+    }
+
     .footer-middle {
-        margin-top: 10px;
+        margin-bottom: 20px;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column-reverse;
+        align-items: flex-start;
         justify-content: space-between;
+        order: 1;
     }
     
     .footer-middle h5 {
-        margin: 10px;
+        margin: 0px;
+    }
+
+    .footer-container h5 {
+        order: 2;
     }
 }
