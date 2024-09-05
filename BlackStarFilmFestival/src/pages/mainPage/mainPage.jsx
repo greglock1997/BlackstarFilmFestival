@@ -45,12 +45,15 @@ export default function MainPage({ filmData, searchTags, updateSearchTags, updat
                         )
                     )}
                 </div>
-                <button
-                    className='main-loadMore'
-                    onClick={updateNumberOfResults}
-                >
-                    Load More
-                </button>
+                {/* Conditionally render button to only show when results are loaded */}
+                {filmData && filmData.length > 0 &&(
+                    <button
+                        className='main-loadMore'
+                        onClick={updateNumberOfResults}
+                    >
+                        Load More
+                    </button>
+                )}
                 <Footer />
             </main>
         </>
